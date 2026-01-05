@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  laravel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: syopi-backend
+    ports:
+      - "9876:80"
+    volumes:
+      - ./storage:/var/www/storage
+      - ./bootstrap/cache:/var/www/bootstrap/cache
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
