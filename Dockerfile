@@ -88,6 +88,6 @@ rm -f /var/www/public/hot\n\
 php-fpm -D\n\
 nginx -g "daemon off;"' > /start.sh && chmod +x /start.sh
 
-EXPOSE 9876
+EXPOSE 3323
 
 CMD ["/start.sh"]

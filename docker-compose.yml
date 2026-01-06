@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: syopi-backend
     ports:
-      - "9876:80"
+      - "3323:80"
     volumes:
       - ./storage:/var/www/storage
       - ./bootstrap/cache:/var/www/bootstrap/cache
